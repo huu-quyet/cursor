@@ -1,0 +1,15 @@
+---
+description: 
+globs: **/*.tsx
+alwaysApply: false
+---
+---
+description: Best practices for using Shadcn UI components
+globs: **/*.tsx
+---
+
+- Follow the component structure and naming conventions provided by Shadcn UI
+- Customize components using the provided props and slots
+- Ensure accessibility by using the built-in ARIA attributes and following best practices
+- Use the theme customization options to maintain a consistent design system
+- Keep components up to date with the latest Shadcn UI releases

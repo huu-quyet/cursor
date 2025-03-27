@@ -1,0 +1,20 @@
+---
+description: 
+globs: **/*.tsx,**/*.css
+alwaysApply: false
+---
+---
+description: Best practices for using Tailwind CSS in your project
+globs: **/*.tsx,**/*.css
+---
+
+- Use utility classes directly in your JSX/HTML for faster development and easier maintenance
+- Group related utility classes using the `@apply` directive in custom components
+- Configure theme extensions in `tailwind.config.js` to maintain a consistent design system
+- Implement responsive design using Tailwind's responsive utility classes
+- Use state variants (e.g., `hover:`, `focus:`, `active:`) to handle different interaction states
+- Set up a proper purge configuration to remove unused styles and optimize bundle size
+- Define a consistent color palette and use semantic color naming for better maintainability
+- Implement dark mode using Tailwind's built-in dark mode support
+- Use Tailwind's built-in accessibility features to ensure your UI is accessible
+- Monitor and optimize your CSS bundle size to improve page load times

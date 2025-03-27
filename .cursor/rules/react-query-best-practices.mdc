@@ -1,0 +1,16 @@
+---
+description: 
+globs: **/*.ts,**/*.tsx
+alwaysApply: false
+---
+---
+description: Best practices for managing data fetching with React Query
+globs: **/*.ts,**/*.tsx
+---
+
+- Use `useQuery` for fetching data and `useMutation` for data modifications
+- Implement proper error handling with `error` and `isError` states
+- Utilize `queryClient.invalidateQueries` for cache invalidation after mutations
+- Set appropriate `staleTime` and `cacheTime` for performance optimization
+- Use `select` to transform data within the query for better performance
+- Implement optimistic updates with `onMutate` for a smoother user experience

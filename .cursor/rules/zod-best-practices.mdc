@@ -1,0 +1,15 @@
+---
+description: 
+globs: **/*.tsx,**/*.ts
+alwaysApply: false
+---
+---
+description: Best practices for using Zod for schema validation and parsing
+globs: **/*.ts,**/*.tsx
+---
+
+- Define schemas for all data structures to ensure type safety and validation
+- Use Zod's built-in validation methods for common data types and patterns
+- Implement custom validation logic using Zod's refine and superRefine methods
+- Utilize Zod's infer utility to generate TypeScript types from schemas
+- Use Zod's async parsing capabilities for validating asynchronous data

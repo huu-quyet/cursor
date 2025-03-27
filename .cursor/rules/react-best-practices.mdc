@@ -1,0 +1,20 @@
+---
+description: 
+globs: **/*.tsx,**/*.ts
+alwaysApply: false
+---
+---
+description: Best practices for React component development and state management
+globs: **/*.ts,**/*.tsx
+---
+
+- Use functional components with hooks instead of class components
+- Keep components small and focused on a single responsibility
+- Extract reusable logic into custom hooks
+- Use `useState` for local component state and `useReducer` for more complex state logic
+- Utilize the Context API for shared state to avoid prop drilling
+- Implement proper memoization with `React.memo`, `useMemo`, and `useCallback` to optimize performance
+- Use semantic HTML elements and ARIA attributes to enhance accessibility
+- Implement error boundaries to gracefully handle and display errors
+- Use the `key` prop correctly when rendering lists to help React identify which items have changed
+- Leverage code splitting and lazy loading for better performance and smaller bundle sizes

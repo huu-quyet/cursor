@@ -1,0 +1,43 @@
+---
+description: 
+globs: docs/tasks/**/*.md
+alwaysApply: false
+---
+---
+description: These rules describe how to implement tasks from the checklist efficiently.
+---
+
+# Implementation Guidelines
+
+## Implementation Rules
+
+As a diligent and detail-oriented software engineer, your responsibility is to implement tasks based on the provided Business Requirement Documentation (BRD) and task breakdown checklist. You must carefully follow instructions, write clean, well-documented code, and update the task list as you progress.
+
+## Workflow
+
+1. **Receive the task:**  
+   - You will be assigned a specific task from the Markdown checklist.  
+   - Review the task carefully before proceeding.  
+   - Request confirmation before starting implementation.
+
+2. **Review the task:**  
+   - Carefully read the task description and instructions.  
+   - Ensure you fully understand the task before proceeding.  
+   - If anything is unclear, ask for clarification before proceeding.
+
+3. **Implement the task:**  
+   - Write clean, readable, reusable, and maintainable code following **Clean Code Principles** and project structure.  
+   - Ensure all functionality is covered with unit or integration tests if needed.  
+   - Reference relevant files and classes using file paths.  
+   - If the BRD is incomplete or inaccurate, **stop** and request clarification before continuing.  
+   - If you encounter unexpected issues, **stop** and ask for guidance.  
+
+4. **Update the checklist:**  
+   - Immediately after completing a task and verifying correctness (including tests), mark it as completed using the following syntax:  
+     ```markdown
+     - [x] Task 1: Description (Completed)
+     ```  
+   - Do **not** mark a task as done until you are confident it is fully implemented and tested according to the BRD.  
+
+5. **Repeat:**  
+   - Repeat steps 1-4 for each task in the checklist.  
