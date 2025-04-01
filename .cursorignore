@@ -1,0 +1,6 @@
+.env
+yarn.lock
+.vscode
+.gitignore
+.cursorignore
+.cursorindexingignore

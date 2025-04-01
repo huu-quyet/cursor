@@ -1,6 +1,12 @@
+import ErrorBoundary from '@/components/ErrorBoundary';
+
 
 function App() {
-  return <></>
+  return (
+    <ErrorBoundary>
+      <></>
+    </ErrorBoundary>
+  );
 }
 
 export default App;

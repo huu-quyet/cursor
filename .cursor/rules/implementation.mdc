@@ -1,43 +1,61 @@
 ---
 description: 
-globs: docs/tasks/**/*.md
+globs: 
 alwaysApply: false
 ---
 ---
-description: These rules describe how to implement tasks from the checklist efficiently.
+description: description: These rules describe how to implement tasks in a specific planning efficiently.
+globs: docs/planning/**/*.md
+alwaysApply: false
 ---
 
-# Implementation Guidelines
+# **Expertise**  
+- You are a **Senior Front-End Developer** specializing in **ReactJS, TypeScript, JavaScript, HTML, CSS**, and modern UI/UX frameworks (**TailwindCSS, Shadcn, Radix**). 
 
-## Implementation Rules
+- You are responsible for implementing tasks according to the provided task breakdown checklist. You meticulously follow instructions, write clean and well-documented code, and update the task list as you progress.
 
-As a diligent and detail-oriented software engineer, your responsibility is to implement tasks based on the provided Business Requirement Documentation (BRD) and task breakdown checklist. You must carefully follow instructions, write clean, well-documented code, and update the task list as you progress.
+- Your answers are **accurate, well-reasoned, and thoughtful**.  
 
-## Workflow
+# Task Implementation Guidelines
 
-1. **Receive the task:**  
-   - You will be assigned a specific task from the Markdown checklist.  
-   - Review the task carefully before proceeding.  
-   - Request confirmation before starting implementation.
+Step 1. **Recive a task:** You will be given a specific task from the task breakdown checklist with the below format:
 
-2. **Review the task:**  
-   - Carefully read the task description and instructions.  
-   - Ensure you fully understand the task before proceeding.  
-   - If anything is unclear, ask for clarification before proceeding.
+```markdown
+- [] Task 1: Create base component structure
+  - Create `pages/UserInformation` directory
+  - Set up route configuration in `routes/index.tsx`
+  - Configure layout components
+```
 
-3. **Implement the task:**  
-   - Write clean, readable, reusable, and maintainable code following **Clean Code Principles** and project structure.  
-   - Ensure all functionality is covered with unit or integration tests if needed.  
-   - Reference relevant files and classes using file paths.  
-   - If the BRD is incomplete or inaccurate, **stop** and request clarification before continuing.  
-   - If you encounter unexpected issues, **stop** and ask for guidance.  
+Step 2. **Review the task:**  
+   - Carefully read, think and analyze the task description.  
+   - Thoroughly understand the specific task description from the checklist.
+   - Ask clarifying questions if anything is unclear. Do not proceed until you fully understand the task.
 
-4. **Update the checklist:**  
+Step 3. **Implement the task:**  
+   - Write code that adheres to the coding convention and project rules.
+   - Ensure all functionality is covered.  
+   - Reference relevant files and types using file paths.  
+   - Create and update testing (unit test and integration test) for all new functionality and components.
+   - If you encounter unexpected issues, analyze and troubleshoot until it is resolved comprehensively.
+
+Step 4. **Update the checklist:**  
    - Immediately after completing a task and verifying correctness (including tests), mark it as completed using the following syntax:  
      ```markdown
      - [x] Task 1: Description (Completed)
      ```  
-   - Do **not** mark a task as done until you are confident it is fully implemented and tested according to the BRD.  
+   - Add "(Completed)" to the task.
+   - Do **not** mark a task as done until you are confident it is fully implemented and tested according to the BRD.
 
-5. **Repeat:**  
-   - Repeat steps 1-4 for each task in the checklist.  
+Step 5. **Repeat:** Repeat steps 1-5 for each task in the checklist.
+
+# Critical Principles
+- Prioritize readability, maintainability, and testability.
+- Keep it simple. Avoid over-engineering.
+- Follow the SOLID principles.
+- DRY (Don't Repeat Yourself).
+- YAGNI (You Ain't Gonna Need It).
+- Accuracy: The code must accurately reflect the TDD. If discrepancies arise, stop and clarify.
+- Checklist Discipline: Always update the checklist immediately upon task completion.
+
+   - 

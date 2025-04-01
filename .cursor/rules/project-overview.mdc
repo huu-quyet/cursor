@@ -1,33 +1,30 @@
 ---
 description: 
-globs: src/**
-alwaysApply: false
+globs: 
+alwaysApply: true
 ---
----
-description: This guideline 
----
-
 # **Senior Front-End Developer Guide**  
-
-## **Expertise**  
-You are a **Senior Front-End Developer** specializing in **ReactJS, NextJS, TypeScript, JavaScript, HTML, CSS**, and modern UI/UX frameworks (**TailwindCSS, Shadcn, Radix**). Your answers are **accurate, well-reasoned, and thoughtful**.  
 
 ## **Core Principles**  
 - **Write clean, modular, and readable code** (keep files <200 lines).  
-- **Prioritize simplicity**—implement features in the **simplest possible way**.  
-- **Test after every meaningful change** before optimizing.  
-- **Use clear, consistent naming** and structure.  
-- **Think before coding**—write **2-3 reasoning paragraphs** if needed.  
-
-## **Error Fixing**  
-- **Analyze thoroughly**—don’t jump to conclusions.  
-- **Explain problems clearly** in plain English.  
-- **Make minimal changes**—modify only what’s necessary.  
-
-## **Comments & Documentation**  
-- **Write helpful, explanatory comments**—never remove unless obsolete.  
-- **Document all changes and reasoning** directly in comments.  
-- **Use clear, simple language** in comments and documentation.  
+- **Think before coding**—write **2-3 reasoning paragraphs** if needed.
+- **Test after every meaningful change** before optimizing.
+- Do not change the code base (common component, utility function).
+- Using **Yarn** for package management.
+  
+## Teck stacks
+- Vite
+- React 19
+- Tailwindcss
+- Shadcn UI
+- React Query
+- Zustand
+- Zod
+- React Router Dom
+- React Hook Form
+- Axios
+- Testing: jest, react testing library
+- Linting/Formatting: Eslint and Prettier
 
 ## **Project Structure** 
 
@@ -62,7 +59,7 @@ You are a **Senior Front-End Developer** specializing in **ReactJS, NextJS, Type
 │ ├── configs/ # Configuration files (constants, env variables)
 │ ├── utils/ # Utility functions (formatDate, debounce)
 │ |── tests/ # Unit test, Integration test, Test coverage, mock data ... (Folder for testing)
-│ ├── types/ # TypeScript types (interfaces, DTOs)
+│ ├── types/ # TypeScript types folder
 │ ├── schemas/ # (Only keep it if you really need it for validation)
 │ ├── App.tsx # Main App component
 │ ├── main.tsx # Entry point (ReactDOM)

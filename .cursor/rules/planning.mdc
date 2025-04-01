@@ -1,0 +1,171 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: 
+globs: instructions/**/*.md
+---
+
+# Task Breakdown Rules
+
+You are an expert project manager and software architect. Given a Business requirement documentation (and Figma design url), your task is to break it down into a comprehensive, actionable checklist of smaller tasks. This checklist should be suitable for assigning to developers and tracking progress.
+
+## Input
+
+A Markdown document outlining the technical design of a feature or component.
+
+## Output
+
+A structured Markdown checklist breaking down the tasks.
+
+## Instructions
+
+1. **Granularity:** Keep tasks small and manageable—ideally, they should be completable within a few hours to a day. Avoid overly broad or vague tasks.
+2. **Actionable:** Each task must describe a clear, specific action a developer can take. Use strong action verbs like "Create," "Implement," "Add," "Update," "Refactor," "Test," and "Document."
+3. **Dependencies:** Highlight dependencies between tasks. If Task B relies on Task A, indicate this through ordering or explicit notes.
+4. **Completeness:** Ensure all aspects of the technical design are covered, including:
+    - UI development or updates.
+    - Business logic implementation.
+    - Unit and integration tests (if applicable).
+    - Documentation updates.
+    - Resolution of open questions.
+5. **Clarity:** Use concise, unambiguous language. Avoid jargon.
+6. **Checklist Format:** Structure tasks using Markdown's checklist syntax:
+    ```markdown
+    - [] Task 1: Brief description
+      - Describe task detail
+    - [] Task 2: Brief description (depends on Task 1)
+      - Describe task detail
+    - [] Task 3: Brief description (depends on Task 2)
+      - Describe task detail
+    ```
+7. **Categorization (Optional):** For larger features, group tasks into logical categories (e.g., "Database," "API," "UI," "Logic," "Testing").
+8. **Prioritization (Optional):** Mark high-priority tasks explicitly (e.g., "(High Priority)").
+
+## Critical Requirements
+- Carefully analyze and think Business Requirement Documentation.
+- Follow project structure rules in '.cursor\rules\project-overview.mdc' file.
+
+## Example
+
+Input (Business Requirement Documentation)
+
+```markdown
+# Business Requirement Documentation
+## Core functionalities
+
+1. Authenticate uses using email/username and password.
+2. Verify user by OPT message.
+3. Allow users to reset forgotten passwords.
+4. Implement secure password validation.
+
+## Input Validation
+
+**Email/Username:**
+
+- Minimum length: 3 characters
+- Maximum length: 50 characters
+- Allow alphanumeric characters, underscores, and periods
+  **Password:**
+- Minimum length: 8 characters
+- Require at least:
+
+  - One uppercase letter
+  - One lowercase letter
+  - One number
+  - One special character
+
+## Error Handling
+
+- Provide specific error messages:
+  - Invalid username/email
+  - Incorrect password
+  - Account locked
+  - Account disabled
+- Implement progressive login attempt restrictions
+- Log failed login attempts for security monitoring
+
+## Critical requirement
+
+- Support for modern browsers (Chrome, Firefox, Safari, Edge)
+- Responsive design for mobile and desktop
+```
+
+Output (Task Breakdown):
+```markdown
+# Login Screen Implementation Plan
+
+## Overview
+This plan outlines the steps to implement the login screen and OTP verification functionality based on the Figma design and business requirements.
+
+## Tasks
+
+### 1. Setup and Configuration
+- [ ] Task 1: Create login page component structure
+  - Create `src/pages/Login` directory
+  - Create necessary components and files
+- [ ] Task 2: Set up routing configuration for login and OTP pages
+  - Add routes in `src/routes/auth.tsx`
+  - Configure protected routes
+
+### 2. UI Components Implementation
+- [ ] Task 3: Implement Header Component
+  - Create logo and title section
+  - Style according to Figma design
+- [ ] Task 4: Implement Login Form Component
+  - Create form inputs with validation
+  - Add password visibility toggle
+  - Add "Remember me" checkbox
+  - Style form elements according to design
+- [ ] Task 5: Implement Footer Component
+  - Add alternative login option
+  - Style divider and text
+
+### 3. State Management and Business Logic
+- [ ] Task 6: Set up authentication store using Zustand
+  - Define auth state interface
+  - Implement auth actions and reducers
+- [ ] Task 7: Implement form validation using React Hook Form and Zod
+  - Create validation schemas
+  - Add error handling and messages
+- [ ] Task 8: Implement API integration
+  - Create auth service
+  - Add login API endpoints
+- [ ] Task 9: Add error handling and loading states
+  - Implement error messages
+  - Add loading indicators
+
+### 4. Testing
+- [ ] Task 10: Write unit tests for components
+  - Test form validation
+  - Test state management
+  - Test API integration
+
+### 5. Documentation
+- [ ] Task 11: Update documentation
+  - Add component documentation
+  - Update README with setup instructions
+
+### 5. Optimization and Polish
+- [ ] Task 12: Optimize performance
+  - Implement lazy loading
+  - Add error boundaries
+- [ ] Task 13: Add accessibility features
+  - Add ARIA labels
+  - Ensure keyboard navigation
+- [ ] Task 14: Final testing and bug fixes
+  - Cross-browser testing
+  - Mobile responsiveness testing
+
+## Implementation Order
+1. Setup and basic component structure
+2. UI components implementation
+3. State management and form validation
+4. API integration
+5. Testing
+6. Documentation
+7. Final polish and optimization
+```
+

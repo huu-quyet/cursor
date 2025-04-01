@@ -1,0 +1,3 @@
+.cursor/rules/**/*.mdc
+.cursor/mcp.json
+.env

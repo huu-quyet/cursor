@@ -2,82 +2,38 @@
 description: Instructions for generating an analysis plan for a specific screen based on the design and Business Requirement Documentation (BRD).
 ---
 
-# Screen Analysis and Implementation Guide
+# **Screen Analysis and Implementation Guide**
 
-## Screen Design
+## **Screen**
 
-- **Figma Design URL**: [Login Page Design (Community)](<https://www.figma.com/design/NeJp7hyC8uWV7JW0jpLJRj/Login-Page-Design-(Community)?node-id=1-82&t=uSDp0F2jePOv5pv7-4>)
+- **Figma file URL**:
+  - [Login Screen](https://www.figma.com/design/F23j9sY9zL1vMbL3TfWkRE/MBF_B%E1%BA%A3n-%C4%91%E1%BB%93-d%E1%BB%AF-li%E1%BB%87u_N%E1%BB%99i-b%E1%BB%99?node-id=1-21039&t=ElBnZlnfjgtvDBrU-4)
+  - [Verify OTP Screen](https://www.figma.com/design/F23j9sY9zL1vMbL3TfWkRE/MBF_B%E1%BA%A3n-%C4%91%E1%BB%93-d%E1%BB%AF-li%E1%BB%87u_N%E1%BB%99i-b%E1%BB%99?node-id=124-7442&t=QbJL4cXPsK9tGLwU-4)
 
-## Tools
+## **Tools**
 
-- **`figma-mcp`**: Use this tool to retrieve design information and download assets in Figma format.
+- **`figma-mcp`:** Retrieve design information and download assets.
 
-## Related Documentation
+## **Documentation**
 
-- **Task Rules**: Located in `.cursor/rules/task.mdc`, guidelines for creating a task checklist.
-- **Business Requirement Documentation (BRD)**: Located in '`docs/brd/login.md`' Detailed business requirements.
-- **Implementation Rules**: Located in `.cursor/rules/implementation.mdc`, defining implementation standards.
+- **Business Requirement Documentation (BRD)**: Located in '`docs/brd/login.md`'.
+- **Planning Rules**: Located in `.cursor/rules/planning.mdc`.
+- **Implementation Rules**: Located in `.cursor/rules/implementation.mdc`.
 
-## Instructions
+## **Tasks**
 
-### **1. Analyzing and Planning**
+### Task 1. Extract Design Data
 
-1. **Extract Design Data**
+- Base the Figma file url, analyze design in the Figma get the node data by node id and save it in the `figma-data/login` (absolute path to this folder). Name is `login-node-data.json`.
 
-   - Analyze the **Figma design URL** and retrieve node data by ID.
-   - Save the node data in `figma-data/login-node-data.json`.
-   - Create necessary folders and files if they do not exist.
+- `login-node-data.json` is a huge file, so break it into multiple smaller files, each file contains the nodes of a section of the screen. Place each section file in `figma-data/login/sections` folder. Use an index file to link all of these sections.
 
-2. **Handle Large Files**
+- Each section file should contain its nodes, keyFile, and a short description of the screen.
 
-   - If `login-node-data.json` is **too large**, split it into multiple smaller files.
-   - Store each section’s data in `figma-data/login/sections/`.
-   - Use an index file to link all sections.
+- Download Figma assets if needed.
 
-3. **Download assets**
+### Task 2. Planning
 
-   - Store assets in the `src/assets/` folder.
+- Base the **Design Data** and **Business Requirement Documentation**, thinking carefully and generate a good plan to implement the screen, step by step. Put your plan in the `docs/planning/login-plan.md` file.
 
-4. **Structure Section Files**
-
-   - Each section file should include:
-     - **Relevant nodes** for that section.
-     - **KeyFile** for reference.
-     - **A short description** of the section.
-
-5. **Generate an Implementation Plan**
-   - Carefully analyze the **BRD**, **Figma node data**, and **Planning Instructions**.
-   - Ensure a complete understanding of all the requirements.
-   - If anything is unclear, ask for clarification before proceeding.
-   - Create a structured, step-by-step implementation plan.
-   - Save the plan in `docs/tasks/login-plan.md`.
-   - Ensure your plan follows the **Task Rules**.
-
-### **2. Implementing Tasks**
-
-1. **Follow the Implementation Plan**
-
-   - Work step by step according to `docs/tasks/login-plan.md`.
-   - Follow the **implementation rules** in `.cursor/rules/implementation.mdc`.
-   - Proceed to the next task **only after** completing and updating the previous one.
-
-2. **Maintain Project Standards**
-
-   - Follow the **project structure**, instructions, and best practices.
-   - **Reuse existing components and logics** without modifying them.
-
-3. **Ensure Code Quality**
-   - Write **clean, readable, reusable, and maintainable** code.
-   - Optimize for **performance, accessibility, and SEO**.
-
-### **3. Update Progress**
-
-- After completing a task and verifying correctness, update the checklist in `docs/tasks/login-plan.md`.
-- Mark completed tasks using Markdown checklist syntax:
-  ```markdown
-  - [x] Implement login form UI (Completed)
-  ```
-
----
-
-By following these structured steps, the implementation will align with the project's best practices and maintain consistency.
+- You can suggest some best practices and strategies to implement the screen. Please provide the reasoning of your choices. Follow **Planning Rules**.
