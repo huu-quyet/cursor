@@ -30,7 +30,7 @@ description: Instructions for generating an analysis plan for a specific screen 
 
 - Each section file should contain its nodes, keyFile, and a short description of the screen.
 
-- Download Figma assets if needed.
+- Download Figma assets if needed (localPath: 'C:/Users/huu_quyet/Desktop/demo/my-app/src/assets').
 
 ### Task 2. Planning
 

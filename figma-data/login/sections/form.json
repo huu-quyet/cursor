@@ -1,0 +1,186 @@
+{
+    "description": "Login form section containing username and password inputs",
+    "fileKey": "F23j9sY9zL1vMbL3TfWkRE",
+    "nodes": [
+        {
+            "id": "1:21249",
+            "name": "Username Label",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "1:21250",
+                    "name": "Tài khoản",
+                    "type": "TEXT",
+                    "text": "Tài khoản",
+                    "textStyle": {
+                        "fontFamily": "Roboto Condensed",
+                        "fontSize": 14,
+                        "fontWeight": 500
+                    }
+                },
+                {
+                    "id": "1:21251",
+                    "name": "Example",
+                    "type": "TEXT",
+                    "text": "(Ví dụ:tuan.pvan10)",
+                    "textStyle": {
+                        "fontFamily": "Roboto Condensed",
+                        "fontSize": 14,
+                        "fontWeight": 500
+                    }
+                },
+                {
+                    "id": "1:21252",
+                    "name": "Required",
+                    "type": "TEXT",
+                    "text": "*",
+                    "textStyle": {
+                        "color": "#ED1C24"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1:21222",
+            "name": "Username Input",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "1:21223",
+                    "name": "User Icon",
+                    "type": "INSTANCE",
+                    "assetPath": "src/assets/user-icon.svg"
+                },
+                {
+                    "id": "1:21224",
+                    "name": "Input Field",
+                    "type": "FRAME",
+                    "children": [
+                        {
+                            "id": "1:21225",
+                            "name": "Placeholder",
+                            "type": "TEXT",
+                            "text": "Nhập tên tài khoản",
+                            "textStyle": {
+                                "fontFamily": "Roboto Condensed",
+                                "fontSize": 14,
+                                "fontWeight": 500
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "1:21253",
+            "name": "Password Label",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "1:21254",
+                    "name": "Mật khẩu",
+                    "type": "TEXT",
+                    "text": "Mật khẩu",
+                    "textStyle": {
+                        "fontFamily": "Roboto Condensed",
+                        "fontSize": 14,
+                        "fontWeight": 500
+                    }
+                },
+                {
+                    "id": "1:21255",
+                    "name": "Required",
+                    "type": "TEXT",
+                    "text": "*",
+                    "textStyle": {
+                        "color": "#ED1C24"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1:21232",
+            "name": "Password Input",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "1:21233",
+                    "name": "Key Icon",
+                    "type": "INSTANCE",
+                    "assetPath": "src/assets/key-icon.svg"
+                },
+                {
+                    "id": "1:21234",
+                    "name": "Input Field",
+                    "type": "FRAME",
+                    "children": [
+                        {
+                            "id": "1:21235",
+                            "name": "Placeholder",
+                            "type": "TEXT",
+                            "text": "Nhập mật khẩu",
+                            "textStyle": {
+                                "fontFamily": "Roboto Condensed",
+                                "fontSize": 14,
+                                "fontWeight": 500
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "1:21242",
+                    "name": "Eye Icon",
+                    "type": "INSTANCE",
+                    "assetPath": "src/assets/eye-closed-icon.svg"
+                }
+            ]
+        },
+        {
+            "id": "1:21244",
+            "name": "Remember Me",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "1:21245",
+                    "name": "Checkbox",
+                    "type": "INSTANCE",
+                    "assetPath": "src/assets/square-icon.svg"
+                },
+                {
+                    "id": "1:21246",
+                    "name": "Label",
+                    "type": "TEXT",
+                    "text": "Ghi nhớ đăng nhập",
+                    "textStyle": {
+                        "fontFamily": "Roboto Condensed",
+                        "fontSize": 14,
+                        "fontWeight": 500
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1:21247",
+            "name": "Login Button",
+            "type": "FRAME",
+            "style": {
+                "backgroundColor": "#005270",
+                "borderRadius": "24px"
+            },
+            "children": [
+                {
+                    "id": "1:21248",
+                    "name": "Button Text",
+                    "type": "TEXT",
+                    "text": "ĐĂNG NHẬP",
+                    "textStyle": {
+                        "fontFamily": "Encode Sans Semi Expanded",
+                        "fontSize": 16,
+                        "fontWeight": 500,
+                        "color": "#FFFFFF"
+                    }
+                }
+            ]
+        }
+    ]
+}

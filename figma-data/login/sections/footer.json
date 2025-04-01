@@ -1,0 +1,59 @@
+{
+    "description": "Footer section containing alternative login options",
+    "fileKey": "F23j9sY9zL1vMbL3TfWkRE",
+    "nodes": [
+        {
+            "id": "124:7495",
+            "name": "Divider",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "124:7496",
+                    "name": "Group 1",
+                    "type": "GROUP",
+                    "children": [
+                        {
+                            "id": "124:7497",
+                            "name": "Line",
+                            "type": "LINE",
+                            "style": {
+                                "stroke": "#827D7D",
+                                "strokeWidth": "1px"
+                            }
+                        },
+                        {
+                            "id": "124:7498",
+                            "name": "Text Container",
+                            "type": "FRAME",
+                            "children": [
+                                {
+                                    "id": "124:7499",
+                                    "name": "Text",
+                                    "type": "TEXT",
+                                    "text": "Hoặc",
+                                    "textStyle": {
+                                        "fontFamily": "Encode Sans Semi Expanded",
+                                        "fontSize": 20,
+                                        "fontWeight": 500
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "536:8516",
+            "name": "Alternative Login",
+            "type": "TEXT",
+            "text": "Đăng nhập qua email Mobifone",
+            "textStyle": {
+                "fontFamily": "Roboto Condensed",
+                "fontSize": 16,
+                "fontWeight": 500,
+                "color": "#005270"
+            }
+        }
+    ]
+}

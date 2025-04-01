@@ -1,0 +1,33 @@
+{
+    "description": "Header section containing logo and title",
+    "fileKey": "F23j9sY9zL1vMbL3TfWkRE",
+    "nodes": [
+        {
+            "id": "1:21219",
+            "name": "Frame 3476406",
+            "type": "FRAME",
+            "children": [
+                {
+                    "id": "1:21220",
+                    "name": "Hệ thống Bản đồ dữ liệu Mobifone",
+                    "type": "TEXT",
+                    "text": "Hệ thống Bản đồ dữ liệu Mobifone",
+                    "textStyle": {
+                        "fontFamily": "Roboto Condensed",
+                        "fontWeight": 500,
+                        "fontSize": 16,
+                        "letterSpacing": "1.5%",
+                        "textAlign": "center"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1:21221",
+            "name": "image 2",
+            "type": "RECTANGLE",
+            "imageRef": "a15364bcaa81953c8670187211977e2315a7aa78",
+            "assetPath": "src/assets/logo.png"
+        }
+    ]
+}

@@ -1,33 +1,34 @@
-import http from './http';
+import { http } from './http'
 
 interface LoginResponse {
   user: {
-    id: string;
-    username: string;
-    email?: string;
-  };
-  token: string;
+    id: string
+    username: string
+    email?: string
+  }
+  token: string
+  requireOtp: boolean
 }
 
 interface OtpVerificationResponse {
-  success: boolean;
-  message: string;
+  success: boolean
+  message?: string
 }
 
 export const authService = {
-  login: async (username: string, password: string): Promise<LoginResponse> => {
-    const response = await http.post('/auth/login', {
+  async login(username: string, password: string) {
+    const response = await http.post<LoginResponse>('/auth/login', {
       username,
-      password,
-    });
-    return response.data;
+      password
+    })
+    return response.data
   },
 
-  verifyOtp: async (otp: string): Promise<OtpVerificationResponse> => {
-    const response = await http.post('/auth/verify-otp', {
-      otp,
-    });
-    return response.data;
+  async verifyOtp(otp: string) {
+    const response = await http.post<OtpVerificationResponse>('/auth/verify-otp', {
+      otp
+    })
+    return response.data
   },
 
   refreshToken: async (): Promise<LoginResponse> => {

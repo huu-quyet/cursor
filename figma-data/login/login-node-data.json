@@ -1,0 +1,22 @@
+{
+    "metadata": {
+        "name": "MBF_Bản đồ dữ liệu_Nội bộ",
+        "lastModified": "2025-04-01T07:20:31Z",
+        "screens": {
+            "login": {
+                "nodeId": "1-21039",
+                "name": "Đăng nhập"
+            },
+            "otp": {
+                "nodeId": "124-7442",
+                "name": "Xác thực OTP"
+            }
+        }
+    },
+    "sections": {
+        "header": "figma-data/login/sections/header.json",
+        "form": "figma-data/login/sections/form.json",
+        "footer": "figma-data/login/sections/footer.json",
+        "otp": "figma-data/login/sections/otp.json"
+    }
+}

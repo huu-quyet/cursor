@@ -1,73 +1,45 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from '@/components/ui/button';
+import { useRouteError, isRouteErrorResponse, useNavigate } from 'react-router-dom'
+import { Button } from './ui/button'
 
-interface Props {
-  children: ReactNode;
-}
+export function ErrorBoundary() {
+  const error = useRouteError()
+  const navigate = useNavigate()
 
-interface State {
-  hasError: boolean;
-  error: Error | null;
-}
+  let errorMessage = 'Đã xảy ra lỗi không mong muốn'
 
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false,
-    error: null,
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-    };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo);
-  }
-
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: null });
-  };
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
-          <div className="max-w-md text-center space-y-4">
-            <h2 className="text-2xl font-medium text-[#005270]">
-              Đã xảy ra lỗi
-            </h2>
-            <p className="text-gray-600">
-              Rất tiếc, đã xảy ra lỗi không mong muốn. Vui lòng thử lại sau.
-            </p>
-            {this.state.error && (
-              <pre className="bg-gray-100 p-4 rounded-lg text-sm text-left overflow-auto">
-                {this.state.error.message}
-              </pre>
-            )}
-            <div className="flex gap-4 justify-center">
-              <Button
-                onClick={this.handleRetry}
-                className="bg-[#005270] hover:bg-[#005270]/90 text-white"
-              >
-                Thử lại
-              </Button>
-              <Button
-                onClick={() => window.location.href = '/login'}
-                variant="outline"
-              >
-                Quay lại trang đăng nhập
-              </Button>
-            </div>
-          </div>
-        </div>
-      );
+  if (isRouteErrorResponse(error)) {
+    switch (error.status) {
+      case 404:
+        errorMessage = 'Không tìm thấy trang bạn yêu cầu'
+        break
+      case 401:
+        errorMessage = 'Bạn không có quyền truy cập trang này'
+        break
+      case 403:
+        errorMessage = 'Truy cập bị từ chối'
+        break
+      case 503:
+        errorMessage = 'Dịch vụ hiện không khả dụng'
+        break
+      default:
+        errorMessage = error.statusText
     }
-
-    return this.props.children;
+  } else if (error instanceof Error) {
+    errorMessage = error.message
   }
-}
 
-export default ErrorBoundary;
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-4">
+      <div className="w-full max-w-md space-y-4 text-center">
+        <h1 className="text-4xl font-bold text-gray-900">Oops!</h1>
+        <p className="text-lg text-gray-600">{errorMessage}</p>
+        <div className="flex justify-center gap-4">
+          <Button onClick={() => navigate(-1)} variant="outline">
+            Quay lại
+          </Button>
+          <Button onClick={() => navigate('/')}>Về trang chủ</Button>
+        </div>
+      </div>
+    </div>
+  )
+}

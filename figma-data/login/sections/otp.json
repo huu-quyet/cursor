@@ -1,0 +1,114 @@
+{
+    "description": "OTP verification screen containing input fields and verification button",
+    "fileKey": "F23j9sY9zL1vMbL3TfWkRE",
+    "nodes": [
+        {
+            "id": "124:7440",
+            "name": "Instructions",
+            "type": "TEXT",
+            "text": "Vui lòng nhập mã OTP được gửi qua SĐT của bạn",
+            "textStyle": {
+                "fontFamily": "Roboto Condensed",
+                "fontSize": 14,
+                "fontWeight": 500,
+                "textAlign": "center"
+            }
+        },
+        {
+            "id": "124:7433",
+            "name": "OTP Input Container",
+            "type": "FRAME",
+            "layout": {
+                "mode": "row",
+                "gap": "30px",
+                "width": 342,
+                "height": 45
+            },
+            "children": [
+                {
+                    "id": "124:7434",
+                    "name": "Input 1",
+                    "type": "FRAME",
+                    "style": {
+                        "stroke": "#9C9C9C",
+                        "strokeWidth": "1px",
+                        "borderRadius": "7px"
+                    }
+                },
+                {
+                    "id": "124:7435",
+                    "name": "Input 2",
+                    "type": "FRAME",
+                    "style": {
+                        "stroke": "#9C9C9C",
+                        "strokeWidth": "1px",
+                        "borderRadius": "7px"
+                    }
+                },
+                {
+                    "id": "124:7436",
+                    "name": "Input 3",
+                    "type": "FRAME",
+                    "style": {
+                        "stroke": "#9C9C9C",
+                        "strokeWidth": "1px",
+                        "borderRadius": "7px"
+                    }
+                },
+                {
+                    "id": "124:7437",
+                    "name": "Input 4",
+                    "type": "FRAME",
+                    "style": {
+                        "stroke": "#9C9C9C",
+                        "strokeWidth": "1px",
+                        "borderRadius": "7px"
+                    }
+                },
+                {
+                    "id": "124:7438",
+                    "name": "Input 5",
+                    "type": "FRAME",
+                    "style": {
+                        "stroke": "#9C9C9C",
+                        "strokeWidth": "1px",
+                        "borderRadius": "7px"
+                    }
+                },
+                {
+                    "id": "124:7439",
+                    "name": "Input 6",
+                    "type": "FRAME",
+                    "style": {
+                        "stroke": "#9C9C9C",
+                        "strokeWidth": "1px",
+                        "borderRadius": "7px"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "124:7473",
+            "name": "Verify Button",
+            "type": "FRAME",
+            "style": {
+                "backgroundColor": "#005270",
+                "borderRadius": "24px"
+            },
+            "children": [
+                {
+                    "id": "124:7474",
+                    "name": "Button Text",
+                    "type": "TEXT",
+                    "text": "XÁC THỰC",
+                    "textStyle": {
+                        "fontFamily": "Encode Sans Semi Expanded",
+                        "fontSize": 16,
+                        "fontWeight": 500,
+                        "color": "#FFFFFF"
+                    }
+                }
+            ]
+        }
+    ]
+}
